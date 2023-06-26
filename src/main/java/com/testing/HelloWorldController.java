@@ -1,13 +1,11 @@
 package com.testing;
 
-import static org.slf4j.LoggerFactory.getLogger;
-
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.slf4j.Logger;
+//import org.slf4j.Logger;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
-    private static final Logger LOG = getLogger(HelloWorldController.class.getName());
+    //private static final Logger LOG = getLogger(HelloWorldController.class.getName());
 
     public static final String MESSAGE_KEY = "message";
     public static final String HOSTNAME_KEY = "hostname";
@@ -39,7 +37,7 @@ public class HelloWorldController {
         response.put(MESSAGE_KEY, "Hello World!");
         response.put(HOSTNAME_KEY, host);
         response.put(IP_KEY, ip);
-        LOG.info("Returning {}", response);
+        //LOG.info("Returning {}", response);
         return response;
     }
 
